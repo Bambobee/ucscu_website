@@ -131,7 +131,7 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     
     .heading{
         padding-top: 100px;
@@ -181,6 +181,7 @@ main{
     #about{
         background-image: url(../images/2.png);
         width: 100%;
+        height: 100vh;
 
         .about-us-container{
             width: 90%;
@@ -189,8 +190,8 @@ main{
             grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
             gap: 2rem;
             align-items: center;
-            padding-top: 50px;
-            padding-bottom: 40px;
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
         .child-1{
             h2{
@@ -256,6 +257,7 @@ main{
 
     #solutions{
         width: 100%;
+        height: 100vh;
         background-image: url('../images/2.png');
         background-repeat: no-repeat;
 
@@ -299,6 +301,7 @@ main{
     #pos-machine{
 
         background-color: #fff2f2;
+        height: 100vh;
 
         .machine{
             display: grid;
@@ -353,7 +356,8 @@ main{
 
     #mobile-banking{
         width: 100%;
-        background-image: url('../images/3.png');
+        height: 100vh;
+        /* background-image: url('../images/3.png'); */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -498,6 +502,7 @@ main{
     }
 
     #contact{
+        height: 100vh;
 
         h2{
             color: var(--semi-dark-maroon);
