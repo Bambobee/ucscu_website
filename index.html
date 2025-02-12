@@ -23,6 +23,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
@@ -432,36 +434,39 @@
         </div>
 
         <div class="form">
-          <form action="">
+          <form id="contactForm">
             <div class="input-fields">
-              <label> Name <span>*</span></label>
-              <input type="text" required />
+                <label> Name <span>*</span></label>
+                <input type="text" id="name" required />
             </div>
 
             <div class="input-fields">
-              <label> SACCO name <span>*</span></label>
-              <input type="text" required />
-            </div>
-            <div class="input-fields">
-              <label>Your Department <span>*</span></label>
-              <input type="text" required />
-            </div>
-            <div class="input-fields">
-              <label> SACCO Email <span>*</span></label>
-              <input type="text" required />
-            </div>
-            <div class="input-fields">
-              <label> Mobile Number <span>*</span></label>
-              <input type="text" required />
+                <label> SACCO Name <span>*</span></label>
+                <input type="text" id="saccoName" required />
             </div>
 
             <div class="input-fields">
-              <label> Custom Message <span>*</span></label>
-              <textarea name="" id=""></textarea>
+                <label>Your Department <span>*</span></label>
+                <input type="text" id="department" required />
             </div>
 
-            <button>Submit</button>
-          </form>
+            <div class="input-fields">
+                <label> SACCO Email <span>*</span></label>
+                <input type="email" id="saccoEmail" required />
+            </div>
+
+            <div class="input-fields">
+                <label> Mobile Number <span>*</span></label>
+                <input type="text" id="mobileNumber" required />
+            </div>
+
+            <div class="input-fields">
+                <label> Custom Message <span>*</span></label>
+                <textarea id="message" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
         </div>
       </div>
 
