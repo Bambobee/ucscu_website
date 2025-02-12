@@ -45,3 +45,47 @@ document.getElementById("contactForm").addEventListener("submit", function (even
             console.error("EmailJS Error:", error);
         });
 });
+
+
+//JS for menu toggle
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+    const menuIcon = menuToggle.querySelector("i");
+    const menuLinks = document.querySelectorAll(".menu a"); // Select all menu links
+
+    menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent click event from reaching document
+        menu.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+
+        // Change icon between ☰ (menu) and ✖ (close)
+        if (menu.classList.contains("active")) {
+            menuIcon.classList.replace("bx-menu", "bx-x");
+        } else {
+            menuIcon.classList.replace("bx-x", "bx-menu");
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    // Close menu when a link is clicked
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            closeMenu();
+        });
+    });
+
+    function closeMenu() {
+        menu.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuIcon.classList.replace("bx-x", "bx-menu");
+    }
+});
+
+  
